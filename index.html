@@ -104,17 +104,6 @@
     </section>
     <section class="overview">
       <h2>Predicting Human Perceptual Variability</h2>
-      <p>
-        To align the base models pretrained on MNIST with the performance of both group and individual levels, we adopted a mixed fine-tuning approach with an 80:20 split for training and validation. 
-        For individual-level datasets (variMNIST-i), which are subsets of variMNIST corresponding to specific individuals, the validation set was designed to avoid overlap with the group validation set.
-        For group-level fine-tuning, we combined the MNIST and variMNIST datasets in a 1:1 ratio, ensuring performance on MNIST while fine-tuning for perceptual variability. 
-        For individual-level fine-tuning, we mixed variMNIST-i, variMNIST, and MNIST datasets in a 2:1:1 ratio, ensuring the models performed effectively on individual-specific, group, and original datasets. For each individual, a customized individual model was trained. 
-        For the whole procedure, the group model (GroupNet) was finetuned from the base model (BaseNet), and the individual model (IndivNet) was finetuned from the group model.
-      </p>
-    </section>
-    <!-- GitHub link -->
-    <section class="links">
-      <h2>Code Repository</h2>
       <figure class="algorithm-figure">
         <img
           src="assets/fig5_icml.png"
@@ -148,6 +137,18 @@
           </p></p>
         </figcaption>
       </figure>
+      <p>
+        To align the base models pretrained on MNIST with the performance of both group and individual levels, we adopted a mixed fine-tuning approach with an 80:20 split for training and validation. 
+        For individual-level datasets (variMNIST-i), which are subsets of variMNIST corresponding to specific individuals, the validation set was designed to avoid overlap with the group validation set.
+        For group-level fine-tuning, we combined the MNIST and variMNIST datasets in a 1:1 ratio, ensuring performance on MNIST while fine-tuning for perceptual variability. 
+        For individual-level fine-tuning, we mixed variMNIST-i, variMNIST, and MNIST datasets in a 2:1:1 ratio, ensuring the models performed effectively on individual-specific, group, and original datasets. For each individual, a customized individual model was trained. 
+        For the whole procedure, the group model (GroupNet) was finetuned from the base model (BaseNet), and the individual model (IndivNet) was finetuned from the group model.
+      </p>
+    </section>
+    <!-- GitHub link -->
+    <section class="links">
+      <h2>Code Repository</h2>
+      
       <p>
         View the full source code on GitHub:  
         <a href="https://github.com/your-username/your-repo" target="_blank">
