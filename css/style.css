@@ -1,3 +1,13 @@
+/* Justify all body text in the content area */
+.content,
+.content p,
+.content li,
+.overview,
+.authors,
+.links p {
+  text-align: justify;
+  text-justify: inter-word; /* nicer word spacing in some browsers */
+}
 /* css/style.css */
 body {
   font-family: sans-serif;
