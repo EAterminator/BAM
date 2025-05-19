@@ -84,7 +84,7 @@ body {
   text-decoration: underline;
 }
 .algorithm-figure {
-  width: 100%;          /* 占满父容器宽度 */
+  width: 90%;          /* 占满父容器宽度 */
   max-width: 800px;     /* 最宽 800px */
   margin: 0 auto;       /* 水平居中 */
 }
