@@ -7,6 +7,12 @@
   text-align: justify;
   text-justify: inter-word; /* nicer word spacing in some browsers */
 }
+.algorithm-figure figcaption {
+  text-align: center;
+}
+.caption {
+  text-align: center;
+}
 /* css/style.css */
 body {
   font-family: sans-serif;
