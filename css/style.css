@@ -34,7 +34,7 @@ body {
   color: #666;
 }
 .content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -85,7 +85,7 @@ body {
 }
 .algorithm-figure {
   width: 90%;          /* 占满父容器宽度 */
-  max-width: 800px;     /* 最宽 800px */
+  max-width: 1000px;     /* 最宽 800px */
   margin: 0 auto;       /* 水平居中 */
 }
 .algorithm-figure img {
