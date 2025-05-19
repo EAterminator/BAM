@@ -147,6 +147,30 @@
     </section>
     <section class="overview">
       <h2>Manipulating Human Perceptual Variablity</h2>
+      <p>
+        Building on variMNIST and alignment experiments, we designed a paradigm to test whether individually fine-tuned models can amplify perceptual differences and guide decision-making (Figure <a href="#fig:manipulate-a">1a</a>). 
+        This experiment evaluates the ability of targeted stimuli to reveal individual variability and achieve precise manipulation of perceptual outcomes, highlighting the potential of personalized modeling in understanding human perception.
+      </p>
+    
+      <h3>First Round</h3>
+      <p>
+        For the <em>first round</em> of experiments, we initially selected around 500 balanced samples from the variMNIST dataset as stimuli. 
+        After collecting behavioral data from pairs of participants, we fine-tuned their individual models. 
+        Controversial stimuli were then generated using the updated models, aiming to elicit distinct choices between the two participants, with each choosing their respective guidance targets.
+      </p>
+    
+      <h3>Second Round</h3>
+      <p>
+        In the <em>second round</em> of experiments, these controversial stimuli were presented to participants in pairs, with each pair completing trials designed to test whether the fine-tuned models could effectively guide their decisions in opposite directions. 
+        The goal was to evaluate whether the generated stimuli amplified perceptual differences and aligned participants’ responses with their respective guidance targets.
+      </p>
+    
+      <p>
+        For each subject pair, approximately 180 controversial samples were generated, ensuring the sample distribution remained as balanced as possible. 
+        A total of 18 participants were recruited for in-lab experiments, grouped into six sets of three participants each. 
+        Within each group, participants were paired in all possible combinations, resulting in three pairs per group and 18 pairs overall. 
+        Each participant completed 500 trials in the first round and approximately 360 trials (<span class="math">\(180\)</span> per pair, across two pairs) in the second round.
+      </p>
        <figure class="algorithm-figure">
         <img
           src="assets/fig6_icml.png"
