@@ -37,18 +37,31 @@
       <h2>Perceptual Boundary Sampling Algorithm</h2>
         <!-- Figure: PDF or image placeholder -->
         <figure class="algorithm-figure">
-          <!-- Option A: embed PDF directly -->
-          <object 
-            data="assets/fig3_icml_new.pdf" 
-            type="application/pdf" 
+        <!-- 1) Preferred: in-page PDF -->
+        <object 
+          data="assets/fig3_icml_new.pdf" 
+          type="application/pdf" 
+          width="100%" 
+          height="400"
+          aria-label="Flowchart of the Perceptual Boundary Sampling Algorithm">
+          <!-- 2) Fallback: iframe embed -->
+          <iframe 
+            src="assets/fig3_icml_new.pdf" 
             width="100%" 
-            height="400">
-          </object>
-          <figcaption>
-            <strong>Figure 1.</strong> Flowchart of our Perceptual Boundary Sampling Algorithm.  
-            Samples are drawn along an ANN’s decision boundary (high‐uncertainty regions), then passed to human observers to measure perceptual ambiguity.
-          </figcaption>
-        </figure>
+            height="400"
+            aria-label="Flowchart of the Perceptual Boundary Sampling Algorithm">
+            <!-- 3) Ultimate fallback: static image -->
+            <img 
+              src="assets/fig3_icml_new.png" 
+              alt="Flowchart of the Perceptual Boundary Sampling Algorithm" 
+              class="algorithm-image" />
+          </iframe>
+        </object>
+        <figcaption>
+          <strong>Figure 1.</strong> Flowchart of our Perceptual Boundary Sampling Algorithm.  
+          Samples are drawn along an ANN’s decision boundary (high-uncertainty regions), then passed to human observers to measure perceptual ambiguity.
+        </figcaption>
+      </figure>
       The image perturbations that significantly affect ANN perception also influence human perception, suggesting that ANNs and humans may share similar perceptual boundaries. 
       Based on this, we hypothesize that samples on these boundaries (which exhibit high perceptual variability for ANNs) may also lead to ambiguous perception in humans, resulting in different internal experiences for the same stimuli.
     </section>
