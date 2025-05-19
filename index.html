@@ -120,9 +120,7 @@
           </p>
           
           <p>
-            (b) Fine-tuning results for five classifiers. On MNIST, group fine-tuning improved ViT and VGG, while others remained unchanged or declined.  
-            On variMNIST, all classifiers improved, with ViT and MLP showing the largest gains and LRM the smallest.  
-            Individual fine-tuning further improved all classifiers following the same trend.
+            (b) Fine-tuning results for five classifiers used in the work.
           </p>
           
           <p>
@@ -139,11 +137,9 @@
         </figcaption>
       </figure>
       <p>
-        To align the base models pretrained on MNIST with the performance of both group and individual levels, we adopted a mixed fine-tuning approach with an 80:20 split for training and validation. 
-        For individual-level datasets (variMNIST-i), which are subsets of variMNIST corresponding to specific individuals, the validation set was designed to avoid overlap with the group validation set.
-        For group-level fine-tuning, we combined the MNIST and variMNIST datasets in a 1:1 ratio, ensuring performance on MNIST while fine-tuning for perceptual variability. 
-        For individual-level fine-tuning, we mixed variMNIST-i, variMNIST, and MNIST datasets in a 2:1:1 ratio, ensuring the models performed effectively on individual-specific, group, and original datasets. For each individual, a customized individual model was trained. 
+        To align the base models pretrained on MNIST with the performance of both group and individual levels, we adopted a 2-stage fine-tuning approach.
         For the whole procedure, the group model (GroupNet) was finetuned from the base model (BaseNet), and the individual model (IndivNet) was finetuned from the group model.
+        For individual-level datasets (variMNIST-i), which are subsets of variMNIST corresponding to specific individuals, the validation set was designed to avoid overlap with the group validation set. More details can be found in the paper.
       </p>
     </section>
     <section class="overview">
@@ -167,10 +163,7 @@
       </p>
     
       <p>
-        For each subject pair, approximately 180 controversial samples were generated, ensuring the sample distribution remained as balanced as possible. 
-        A total of 18 participants were recruited for in-lab experiments, grouped into six sets of three participants each. 
-        Within each group, participants were paired in all possible combinations, resulting in three pairs per group and 18 pairs overall. 
-        Each participant completed 500 trials in the first round and approximately 360 trials (<span class="math">\(180\)</span> per pair, across two pairs) in the second round.
+        Each participant completed 500 trials in the first round and approximately 360 trials (<span class="math">\(180\)</span> per pair, across two pairs) in the second round. More details can be found in the paper.
       </p>
        <figure class="algorithm-figure">
         <img
@@ -185,7 +178,7 @@
             </p>
           
             <p>
-              <strong>(b)</strong> The middle two bars show the guidance outcomes for variMNIST and the individually customized dataset, which is generated under the guidance of finely-tuned individual models to better evoke variability and bias participants toward certain directions, with the individually customized dataset achieving a higher success rate. The left and right bars further analyze the successful samples, where the dark blue indicates the participant’s choices aligned with the guidance direction, and the light blue indicates the opposite. Compared to variMNIST, IndivNets also improve the directionality of guiding perceptual changes.
+              <strong>(b)</strong> The middle two bars show the guidance outcomes for variMNIST and the individually customized dataset, with the individually customized dataset achieving a higher success rate. The left and right bars further analyze the successful samples, where the dark blue indicates the participant’s choices aligned with the guidance direction, and the light blue indicates the opposite. Compared to variMNIST, IndivNets also improve the directionality of guiding perceptual changes.
             </p>
           
             <p>
