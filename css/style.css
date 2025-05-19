@@ -3,7 +3,6 @@
 .content p,
 .content li,
 .overview,
-.authors,
 .links p {
   text-align: justify;
   text-justify: inter-word; /* nicer word spacing in some browsers */
