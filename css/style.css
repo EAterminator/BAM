@@ -56,3 +56,15 @@ body {
   font-size: 0.9rem;
   color: #777;
 }
+.authors {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.authors a {
+  color: #0366d6;
+  text-decoration: none;
+}
+.authors a:hover {
+  text-decoration: underline;
+}
