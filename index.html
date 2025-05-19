@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -43,7 +44,7 @@
       Through personalized model alignment and adversarial generation, we establish a reliable method for simultaneously predicting and manipulating the divergent perceptual decisions of pairs of participants.
       This work bridges the gap between computational models and human individual difference research, providing new tools for personalized perception analysis.
     </section>
-    <!-- Algorithm -->
+    <!-- Perceptual Boundary Sampling Algorithm -->
     <section class="overview">
       <h2>Perceptual Boundary Sampling Algorithm</h2>
        <figure class="algorithm-figure">
@@ -53,12 +54,54 @@
           class="algorithm-image"
         />
         <figcaption>
-          <p class="caption"><strong>Figure 1.</strong> Flowchart of our Perceptual Boundary Sampling Algorithm.  
+          <p class="caption">Flowchart of our Perceptual Boundary Sampling Algorithm.  
           Samples are drawn along an ANN’s decision boundary (high-uncertainty regions), then passed to human observers to measure perceptual ambiguity.</p>
         </figcaption>
       </figure>
       The image perturbations that significantly affect ANN perception also influence human perception, suggesting that ANNs and humans may share similar perceptual boundaries. 
       Based on this, we hypothesize that samples on these boundaries (which exhibit high perceptual variability for ANNs) may also lead to ambiguous perception in humans, resulting in different internal experiences for the same stimuli.
+    </section>
+    
+    </section>
+    <!-- Collecting Human perceptual variability -->
+    <section class="overview">
+      <h2>Collecting Human Perceptual Variability</h2>
+       <figure class="algorithm-figure">
+        <img
+          src="assets/fig4_icml.png"
+          alt="Guidance Outcome."
+          class="algorithm-image"
+        />
+        <figcaption>
+          <p class="caption">Guidance Outcome.</p>
+        </figcaption>
+      </figure>
+        <p>
+    To comprehensively evaluate the guiding effectiveness of the generation method, we define three types of <em>guidance outcome</em>, as illustrated in <a href="#fig:variMNIST_success">Figure 1a</a>: <em>success</em>, <em>bias</em>, and <em>failure</em>. 
+    For the guidance targets <em>o<sub>1</sub></em> and <em>o<sub>2</sub></em>, let <em>p<sub>1</sub></em> and <em>p<sub>2</sub></em> represent the probabilities of participants choosing <em>o<sub>1</sub></em> and <em>o<sub>2</sub></em>, respectively.
+  </p>
+  <p>
+    A result is considered <em>success</em> if 
+    <span class="math">\(p_1 + p_2 \geq 80\%\)</span> 
+    and 
+    <span class="math">\(\min(p_1, p_2) \geq 10\%\)</span>, 
+    indicating the generated stimuli guide participants to make a balanced choice between the two targets.
+  </p>
+  <p>
+    A result is labeled as <em>bias</em> if 
+    <span class="math">\(p_1 + p_2 \geq 80\%\)</span> 
+    but 
+    <span class="math">\(\min(p_1, p_2) < 10\%\)</span>, 
+    indicating a strong bias toward one target.
+  </p>
+  <p>
+    A result is classified as <em>failure</em> if 
+    <span class="math">\(p_1 + p_2 < 80\%\)</span>, 
+    meaning the stimuli fail to guide participants effectively.
+  </p>
+  <p>
+    These definitions allow us to evaluate and compare the performance of different guidance strategies and classifiers.
+  </p>
     </section>
     
     <!-- GitHub link -->
