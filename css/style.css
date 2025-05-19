@@ -68,3 +68,12 @@ body {
 .authors a:hover {
   text-decoration: underline;
 }
+.algorithm-figure {
+  width: 100%;          /* 占满父容器宽度 */
+  max-width: 800px;     /* 最宽 800px */
+  margin: 0 auto;       /* 水平居中 */
+}
+.algorithm-figure img {
+  width: 100%;          /* 图片宽度拉满 figure */
+  height: auto;         /* 保持比例 */
+}
