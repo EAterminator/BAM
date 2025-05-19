@@ -62,7 +62,6 @@
       Based on this, we hypothesize that samples on these boundaries (which exhibit high perceptual variability for ANNs) may also lead to ambiguous perception in humans, resulting in different internal experiences for the same stimuli.
     </section>
     
-    </section>
     <!-- Collecting Human perceptual variability -->
     <section class="overview">
       <h2>Collecting Human Perceptual Variability</h2>
@@ -73,37 +72,39 @@
           class="algorithm-image"
         />
         <figcaption>
-          <p class="caption">Guidance Outcome.</p>
+          <p class="caption">Guidance Outcome. (a) shows the definition for guidance outcomes, (b) shows the guidance outcome of the hand-written digits and natural images.</p>
         </figcaption>
       </figure>
         <p>
-    To comprehensively evaluate the guiding effectiveness of the generation method, we define three types of <em>guidance outcome</em>: <em>success</em>, <em>bias</em>, and <em>failure</em>. 
-    For the guidance targets <em>o<sub>1</sub></em> and <em>o<sub>2</sub></em>, let <em>p<sub>1</sub></em> and <em>p<sub>2</sub></em> represent the probabilities of participants choosing <em>o<sub>1</sub></em> and <em>o<sub>2</sub></em>, respectively.
-  </p>
-  <p>
-    A result is considered <em>success</em> if 
-    <span class="math">\(p_1 + p_2 \geq 80\%\)</span> 
-    and 
-    <span class="math">\(\min(p_1, p_2) \geq 10\%\)</span>, 
-    indicating the generated stimuli guide participants to make a balanced choice between the two targets.
-  </p>
-  <p>
-    A result is labeled as <em>bias</em> if 
-    <span class="math">\(p_1 + p_2 \geq 80\%\)</span> 
-    but 
-    <span class="math">\(\min(p_1, p_2) < 10\%\)</span>, 
-    indicating a strong bias toward one target.
-  </p>
-  <p>
-    A result is classified as <em>failure</em> if 
-    <span class="math">\(p_1 + p_2 < 80\%\)</span>, 
-    meaning the stimuli fail to guide participants effectively.
-  </p>
-  <p>
-    These definitions allow us to evaluate and compare the performance of different guidance strategies and classifiers.
-  </p>
+          To comprehensively evaluate the guiding effectiveness of the generation method, we define three types of <em>guidance outcome</em>: <em>success</em>, <em>bias</em>, and <em>failure</em>. 
+          For the guidance targets <em>o<sub>1</sub></em> and <em>o<sub>2</sub></em>, let <em>p<sub>1</sub></em> and <em>p<sub>2</sub></em> represent the probabilities of participants choosing <em>o<sub>1</sub></em> and <em>o<sub>2</sub></em>, respectively.
+        </p>
+        <p>
+          A result is considered <em>success</em> if 
+          <span class="math">\(p_1 + p_2 \geq 80\%\)</span> 
+          and 
+          <span class="math">\(\min(p_1, p_2) \geq 10\%\)</span>, 
+          indicating the generated stimuli guide participants to make a balanced choice between the two targets.
+        </p>
+        <p>
+          A result is labeled as <em>bias</em> if 
+          <span class="math">\(p_1 + p_2 \geq 80\%\)</span> 
+          but 
+          <span class="math">\(\min(p_1, p_2) < 10\%\)</span>, 
+          indicating a strong bias toward one target.
+        </p>
+        <p>
+          A result is classified as <em>failure</em> if 
+          <span class="math">\(p_1 + p_2 < 80\%\)</span>, 
+          meaning the stimuli fail to guide participants effectively.
+        </p>
+        <p>
+          These definitions allow us to evaluate and compare the performance of different guidance strategies and classifiers.
+        </p>
     </section>
-    
+    <section class="overview">
+      
+    </section>
     <!-- GitHub link -->
     <section class="links">
       <h2>Code Repository</h2>
